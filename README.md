@@ -1,2 +1,2 @@
 # opschallenge_201
-Ops 201 challenge
+Repo containing challenges from Ops 201.
