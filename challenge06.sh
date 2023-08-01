@@ -22,15 +22,15 @@ is_file_available() {
 }
 
 while true; do
-  read -p "Enter a file or folder name to check if it is available, or type 'done' to finish. " file_to_check
-  if [ "$file_to_check" = "done" ]; then
+  read -p "Enter a file or folder name to check if it is available, or type 'done' to finish. " file_to_check #asks for filename as input
+  if [ "$file_to_check" = "done" ]; then #if the input is 'done'...
     break # exit the loop
   fi
   
-  if [ -e "$file_to_check" ]; then
+  if [ -e "$file_to_check" ]; then #-e means file exists
     echo "The file already exists";
   else
-    mkdir -p "$file_to_check"
+    mkdir -p "$file_to_check" #anything not existing already will be created
     echo "The file or folder was created."
   fi 
   done
